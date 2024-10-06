@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navbar" id="navbar">
+                <p id="nombre">Cambiar Nombre</p>
+                <p id="pistaAdicional">Pistas Adicionales</p>
+                <p id="nivel">Nivel del Juego</p>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="titulo">
+            <h1>Busqueda Del Tesoro</h1>
+        </div>
+        <div class="mapa">
+            <img src="./img/ESCENARIO_1.jpg" alt="mapa" id="mapa">
+            <img src="./img/cajaTesoro.png" alt="tesoro" id="caja">
+            <div id="msnClick" class="msnClick"></div>
+            <div class="pistas">
+                <p>Debes ir dando clic sobre el mapa, se te ira mostrando pistas 
+                    (Frio, Tibio, Caliente) con estas pistas podras saber si estas 
+                    cerca o lejos. pero ten cuidado podrias toparte con exigentes retos.
+                </p><br>
+                <input id="btnComenzar" title="Iniciar Juego" type="button" value="Comenzar" onclick="iniciarPuntos()">
+                <input id="btnReiniciar" title="Reiniciar" type="button" value="Reiniciar" onclick="ReiniciarPuntos()">
+                <p id="iniciado">¿Aun No Desembarcamos?</p>
+                
+                <div class="row">
+                    <div class="col">
+                        <p>No. Clicks</p>    
+                        <div id="mostrarClics"></div>
+                    </div>
+                    <div class="col">
+                        <p>No. Tesoros Encontrados</p>
+                        <div id="mostrarRuta"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="description">
+            <p class="descriptionp">Sois <span id="nombreParrafo">Antuan de la Mar</span>, Capitan del Emporium un navio temido en los 7
+                mares, llegas a una isla llamada Churumbeles por una vieja leyenda. Cuenta la historia de 
+                un legendario caballero que navego por los mares en busca de una isla donde guardaria su tesoro, 
+                tan grande como para llenar 2 barcos. tu MISION sera ENCONTRAR EL TESORO. 
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- Modal Para Nombre -->
+    <div class="modalNombre" id="modalN">
+        <div class="contenedorModalNombre">
+          <h3>Bienvenido</h3>
+          <label for="nombre">Nombre: </label>
+          <input type="text" name="nombre" id="nombreI">
+          <button id="cambiarNombre">Cambiar</button>
+        </div>
+    </div>
+
+    <!-- Modal Para Ganar -->
+    <div class="modalG" id="modalGanar">
+        <div class="contenedorG">
+          <h1>FELICITACIONES <span id="nombreGanador"></span></h1>
+          <h3>Has demostrado tenacidad y valentia nosotros la tripulacion te agradecemos,
+            ahora con este tesoro podremos viajar al norte y crear un Imperio. GRRRRR.
+          </h3>   
+          <button id="salir" onclick="cerrarModalG()">Salir</button>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./script/script.js"></script>
+</body>
+</html>
